@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "type": "coreclr",
+            "request": "launch",            
+            "name": "Launch .NET Core App",
+            "program": "${workspaceFolder}/bin/Debug/net9.0/TestMediatR.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "preLaunchTask":"Build: TestMediatR.csproj",
+        }
+    ],
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "programPath",
+            "description": "Enter the path to your application DLL (e.g., bin/Debug/net9.0/TestMediatR.dll)"
+        }
+    ]
+}
